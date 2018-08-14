@@ -1,0 +1,38 @@
+
+
+h1{
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    background-color: blue; 
+    padding-bottom: 50px;
+    font-size: 60px;
+    padding-top: 25px;
+    font-family: 'Kirang Haerang', cursive;
+    color: green;
+   
+}
+
+
+img{
+    display: inline;
+    width:170px;
+    margin-left: 50px;
+
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: blue;
+    font-size: 30px;
+    background-color: slategray;
+}
+body{
+    background-color: sandybrown;
+}
+footer{
+    background-color:ghostwhite;
+    font-family: Arial, Helvetica, sans-serif;
+    color:red;
+    font-size: 30px;
+}
+
