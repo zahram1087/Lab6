@@ -202,7 +202,7 @@ console.log(seattleCenter);
 var capitalHill = {
     minCustomers: 20,
     maxCustomers: 38,
-    avgCookieSales: 3.7,
+    avgCookieSales: 2.3,
     totalCookies: 0,
     collectedCookiesPerHour: [],
     collectedNumCustomers: [],
