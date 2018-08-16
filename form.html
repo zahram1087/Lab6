@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+</head>
+
+<body>
+
+    <h1> New Locations will be typed here my the users</h1>
+
+    <form id="new-store-location">
+        <fieldset>
+            <legend> New Store Location Submission Form</legend>
+
+            <label for="Store Location"> Store Location :</label>
+            <input name="Store Location" type="text" size="15" />
+
+            <label for="minCustomer">minCustomer:</label>
+            <input name="minCustomer" type="text" size="15" />
+
+            <label for="maxCustomer">maxCustomer:</label>
+            <input name="maxCustomer" type="text" size="15" />
+
+            <label for="avgCookieSales">avgCookieSales:</label>
+            <input name="avgCookieSales" type="text" size="15" />
+
+            <button type="submit">Create New Store Location</button>
+
+
+        </fieldset>
+    </form>
+
+    <button id="clear-new-location-list"> Clear all new locations</button>
+    <ul id="location-list"></ul>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
