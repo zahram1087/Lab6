@@ -1,47 +1,117 @@
 
 
-h1{
+h1, h2{
     font-size: 40px;
     text-align: center;
     font-weight: bold;
     background-color: blue; 
-    padding-bottom: 50px;
     font-size: 60px;
-    padding-top: 25px;
     font-family: 'Kirang Haerang', cursive;
     color: green;
+    border-radius: 20px
    
 }
 
 
-img{
+img {
     display: inline;
     width:170px;
-    margin-left: 50px;
+    margin-left: 50px;   
 
 }
+
 p{
     font-family: Arial, Helvetica, sans-serif;
     color: blue;
     font-size: 30px;
-    background-color: slategray;
+    width: 50%;
+    display: inline-block;
+   
 }
 body{
     background-color: sandybrown;
-}
-footer{
-    background-color:ghostwhite;
-    font-family: Arial, Helvetica, sans-serif;
-    color:red;
-    font-size: 30px;
-}
+} 
 
 table{
     border-collapse: collapse;
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 table, th, td {
 border : 2px solid black;
 text-emphasis: bold;
+font-family: Arial, Helvetica, sans-serif;
 }
+
+/* the following css code will change the new submit form for the new store location to purple */
+#new-store-location{ 
+    background-color : rebeccapurple; 
+} 
+
+/* the following css code changes the color of the table that stores all he total cookies*/
+#cookie{
+    background-color: rebeccapurple;
+    width: 100%;
+}
+ /* the following css code is changing the title of the sales.html for the title that says: adding new locations and the other title that says : Pat's Salmon Cookies*/
+
+ #title{
+ border-radius: 20px
+}
+
+#add {
+    border-radius: 20px
+   }
+
+#top-bar{
+       width: 100%;
+   }
+
+.nav-bar{
+       display: inline-block;
+       margin-left: 80px;
+       text-align: center;
+       padding-left: 150px;
+       padding-top: 20px;
+       font-size: 20px; 
+ }
+div + h1 {
+     z-index: 1;
+     display: inline-block;
+     width: 100%;
+ }
+
+#chinook2{
+    margin: 17px;
+    float: right;
+    z-index: 2;
+    width : 170px;
+   
+}
+
+#chinook{
+    margin: 17px;
+    float: left;
+    z-index: 2;
+    width: 170px
+
+}
+
+#p and fish{
+    background: blue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#cutter{
+width: 170px;
+}
+footer + img + p {
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    color:red;
+    font-size: 30px;
+}
+
+
+  
+ 

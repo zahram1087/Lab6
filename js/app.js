@@ -30,7 +30,6 @@ new Storelocation('Seattle Center', 11, 38, 3.7);
 new Storelocation('Capital Hill', 20, 38, 2.3);
 new Storelocation('Alki', 2, 16, 4.6);
 
-
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
 Storelocation.prototype.dailyCustomersPerHour = function () {
@@ -70,6 +69,8 @@ function callAllfunctions() {
     allLocations[i].collectedTotalCookies();
   }
 }
+
+
 callAllfunctions();
 
 
@@ -145,29 +146,31 @@ function footerTotals() {
   totalCell.push(dailyLocationTotal);
 
   var trEl = document.createElement('tr');
-  trEl.setAttribute('id','footer'); // locking the footer to the bottom of the table?
+  trEl.setAttribute('id', 'footer'); // locking the footer to the bottom of the table?
   var thEl = document.createElement('th');
   thEl.textContent = 'Totals';
   trEl.appendChild(thEl);
-  cookieTable.appendChild(trEl);
+  cookieTable.appendChild(trEl); //try putting at bottom
   console.log(thEl);
 
   for (var k = 0; k < totalCell.length; k++) {
     var tdEl = document.createElement('td');
     tdEl.textContent = totalCell[k];
     trEl.appendChild(tdEl);
+    cookieTable.appendChild(trEl); //added this to keep the re-render removing everything.
   }
 }
 
 // creating a function that takes the array that was fed information from the constructor and renders it for every index. this requires a loop because...?
 
 function renderAll() {
+  //cookieTable.innerHTML = '';
   for (var i = 0; i < allLocations.length; i++) {
+
     allLocations[i].render();
   }
 
 }
-
 renderAll();
 footerTotals();
 
@@ -176,21 +179,13 @@ footerTotals();
 
 // Global variables for DOM access
 var newStoreLocation = document.getElementById('new-store-location');
-var locationlist = document.getElementById('location-list');
-var clearNewLocationList = document.getElementById('clear-new-location-list');
+//var locationList = document.getElementById('location-list');
+//var clearNewLocationList = document.getElementById('clear-new-location-list');
 
-//var allNewLocations = [];
 
-//new Storelocation(//that the submit button is collecting?);
-
-//new object for the new store submission
-
-// +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // Event listner for new locations submission form
 newStoreLocation.addEventListener('submit', handleCommentSubmit);
-
-
 
 function handleCommentSubmit(event) {
 
@@ -216,18 +211,27 @@ function handleCommentSubmit(event) {
   event.target.avgCookieSales.value = null;
 
   //allLocations.unshift(newLocation); //this add to the end
+  cookieTable.innerHTML = '';
+  makeHeaderRow();
+  newLocation.dailyCustomersPerHour();
+  newLocation.dailyCookiesSoldperHour();
+  newLocation.collectedTotalCookies();
+  //callAllfunctions();
+  renderAll();
 
-  callAllfunctions();
-  newLocation.render();
+  //newLocation.render();
+  footerTotals(); //calling footer again for new locations
 
 }
 // event listner to comment submission form
 newStoreLocation.addEventListener('submit', handleCommentSubmit);
 
-// +++++++++++++++++++++++++++++++++++++++++++++++++++++
-// Event listener for the 'Clear all new store location' button
-clearNewLocationList.addEventListener('click', function () {
-  locationList.innerHTML = '';
-  console.log('You just cleared the location list!');
+// // +++++++++++++++++++++++++++++++++++++++++++++++++++++
+// // Event listener for the 'Clear all new store location' button
+// clearNewLocationList.addEventListener('click', function () {
+//locationList.innerHTML = '';
+//   console.log('You just cleared the location list!');
 
-});
+// });
+
+//cookieTable.innerHTML = ''; //this clears the whole table and re-renders the new value.
